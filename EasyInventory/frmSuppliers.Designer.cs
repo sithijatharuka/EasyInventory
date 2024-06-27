@@ -40,6 +40,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.supplierDataGridView = new System.Windows.Forms.DataGridView();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.supplierDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 487);
+            this.textBox1.Location = new System.Drawing.Point(143, 513);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(557, 22);
@@ -81,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 537);
+            this.label3.Location = new System.Drawing.Point(28, 563);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 40;
@@ -90,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 491);
+            this.label1.Location = new System.Drawing.Point(28, 517);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 16);
             this.label1.TabIndex = 38;
@@ -98,7 +100,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 530);
+            this.textBox2.Location = new System.Drawing.Point(143, 556);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(557, 22);
@@ -163,11 +165,31 @@
             this.supplierDataGridView.Size = new System.Drawing.Size(900, 382);
             this.supplierDataGridView.TabIndex = 50;
             // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(143, 473);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(199, 22);
+            this.txtId.TabIndex = 52;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 476);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 16);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Id";
+            // 
             // frmSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 603);
+            this.ClientSize = new System.Drawing.Size(915, 684);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.supplierDataGridView);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -203,5 +225,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView supplierDataGridView;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -25,6 +25,16 @@ namespace EasyInventory
             refreshDataGrid();
         }
 
+        private void tblDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtId.Text = tblDataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtProductName.Text = tblDataGridView.CurrentRow.Cells[1].Value.ToString();
+            cmbCategory.Text = tblDataGridView.CurrentRow.Cells[2].Value.ToString();
+            txtPrice.Text = tblDataGridView.CurrentRow.Cells[3].Value.ToString();
+            txtQty.Text = tblDataGridView.CurrentRow.Cells[4].Value.ToString();
+
+        }
+
         private void refreshDataGrid()
         {
             var selectData = from a in dc.tblProducts select a;
@@ -62,18 +72,14 @@ namespace EasyInventory
             }
             catch
             {
-                MessageBox.Show("An error occurred while adding the product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error while adding Product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void deleteData() {
             try
             {
-                tblProduct product = dc.tblProducts.FirstOrDefault(p => p.id.Equals(txtId.Text));
-                product.productName = txtProductName.Text;
-                product.qty = Convert.ToInt32(txtQty.Text);
-                product.price = Convert.ToDecimal(txtPrice.Text);
-                product.category = cmbCategory.Text;
+                tblProduct product = dc.tblProducts.FirstOrDefault(p => p.id.Equals(txtId.Text));        
                 dc.tblProducts.DeleteOnSubmit(product);
                 dc.SubmitChanges();
                 refreshDataGrid();
@@ -82,7 +88,7 @@ namespace EasyInventory
             }
             catch
             {
-                MessageBox.Show("An error occurred while deleting the product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error while deleting Product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,11 +104,10 @@ namespace EasyInventory
                 refreshDataGrid();
                 clearData();
                 MessageBox.Show("Product has been successfully updated.", "Product Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             catch
             {
-                MessageBox.Show("An error occurred while updating the product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error while updating Product. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,18 +115,9 @@ namespace EasyInventory
             txtProductName.Clear();
             txtPrice.Clear();
             txtQty.Clear();
-            //cmbCategory.SelectedIndex = "";
         }
 
-        private void tblDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            txtId.Text = tblDataGridView.CurrentRow.Cells[0].Value.ToString();
-            txtProductName.Text = tblDataGridView.CurrentRow.Cells[1].Value.ToString();
-            cmbCategory.Text = tblDataGridView.CurrentRow.Cells[2].Value.ToString();
-            txtPrice.Text = tblDataGridView.CurrentRow.Cells[3].Value.ToString();
-            txtQty.Text = tblDataGridView.CurrentRow.Cells[4].Value.ToString();
-           
-        }
+ 
 
         // calling crud operations
 

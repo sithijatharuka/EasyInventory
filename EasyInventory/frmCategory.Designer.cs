@@ -31,15 +31,17 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.descRichTextBox = new System.Windows.Forms.RichTextBox();
             this.categoryDataGridView = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,12 +70,12 @@
             this.textBox4.Size = new System.Drawing.Size(508, 22);
             this.textBox4.TabIndex = 30;
             // 
-            // textBox1
+            // txtCategory
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 495);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(558, 22);
-            this.textBox1.TabIndex = 26;
+            this.txtCategory.Location = new System.Drawing.Point(142, 495);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(558, 22);
+            this.txtCategory.TabIndex = 26;
             // 
             // label3
             // 
@@ -93,13 +95,13 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Category Name";
             // 
-            // richTextBox1
+            // descRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(142, 532);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(558, 58);
-            this.richTextBox1.TabIndex = 33;
-            this.richTextBox1.Text = "";
+            this.descRichTextBox.Location = new System.Drawing.Point(142, 532);
+            this.descRichTextBox.Name = "descRichTextBox";
+            this.descRichTextBox.Size = new System.Drawing.Size(558, 58);
+            this.descRichTextBox.TabIndex = 33;
+            this.descRichTextBox.Text = "";
             // 
             // categoryDataGridView
             // 
@@ -118,6 +120,7 @@
             this.categoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.categoryDataGridView.Size = new System.Drawing.Size(900, 382);
             this.categoryDataGridView.TabIndex = 34;
+            this.categoryDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.categoryDataGridView_CellMouseClick);
             // 
             // btnClear
             // 
@@ -127,6 +130,7 @@
             this.btnClear.TabIndex = 38;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -136,6 +140,7 @@
             this.btnDelete.TabIndex = 37;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -145,6 +150,7 @@
             this.btnUpdate.TabIndex = 36;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -154,26 +160,48 @@
             this.btnAdd.TabIndex = 35;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(142, 467);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(199, 22);
+            this.txtId.TabIndex = 40;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 470);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 16);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Id";
             // 
             // frmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 684);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.categoryDataGridView);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.descRichTextBox);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "frmCategory";
             this.Text = "Category";
+            this.Load += new System.EventHandler(this.frmCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,14 +213,16 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox descRichTextBox;
         private System.Windows.Forms.DataGridView categoryDataGridView;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -7,11 +7,10 @@ C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.c
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.csproj.CoreCompileInputs.cache
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.exe
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.pdb
-C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.Form1.resources
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmCategory.resources
-C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmHistory.resources
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmHome.resources
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmProducts.resources
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmSuppliers.resources
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Debug\InventoryDB.mdf
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Debug\InventoryDB_log.ldf
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmPos.resources

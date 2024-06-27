@@ -61,17 +61,7 @@ namespace EasyInventory
             frmSuppliers.Show(); // Show form2
         }
 
-        private void LoadfrmHistory()
-        {
-            frmHistory frmHistory = new frmHistory();
-            frmHistory.TopLevel = false; // Set TopLevel to false
-            frmHistory.FormBorderStyle = FormBorderStyle.None; // Remove the border
-            frmHistory.Dock = DockStyle.Fill; // Fill the panel with the form
-            HomePanel.Controls.Add(frmHistory); // Add form2 to panel1
-            //HomePanel.Tag = frmHistory; // Set panel tag to form2
-            frmHistory.BringToFront();
-            frmHistory.Show(); // Show form2
-        }
+  
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
@@ -93,9 +83,20 @@ namespace EasyInventory
             LoadfrmSuppliers();
         }
 
-        private void btnHistory_Click(object sender, EventArgs e)
+        private void btnPos_Click(object sender, EventArgs e)
         {
-            LoadfrmHistory();
+            frmPos frmPOS = new frmPos();
+            // Open the frmPOS from
+            frmPOS.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

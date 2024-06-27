@@ -54,7 +54,6 @@ namespace EasyInventory
             tblDataGridView.Columns[2].HeaderText = "Category";
             tblDataGridView.Columns[3].HeaderText = "Price (Rs)";
             tblDataGridView.Columns[4].HeaderText = "Quantity";
-
         }
 
         //WORKING WITH DATABASE
@@ -147,7 +146,6 @@ namespace EasyInventory
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deleteData();
-        }
-   
+        }    
     }
 }

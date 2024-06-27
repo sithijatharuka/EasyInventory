@@ -31,10 +31,10 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -72,13 +72,13 @@
             this.textBox4.Size = new System.Drawing.Size(508, 22);
             this.textBox4.TabIndex = 42;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 513);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(557, 22);
-            this.textBox1.TabIndex = 41;
+            this.txtName.Location = new System.Drawing.Point(143, 513);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(557, 22);
+            this.txtName.TabIndex = 41;
             // 
             // label3
             // 
@@ -98,13 +98,13 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Supplier Name";
             // 
-            // textBox2
+            // txtPhoneNo
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 556);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(557, 22);
-            this.textBox2.TabIndex = 45;
+            this.txtPhoneNo.Location = new System.Drawing.Point(143, 556);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.Size = new System.Drawing.Size(557, 22);
+            this.txtPhoneNo.TabIndex = 45;
             // 
             // btnClear
             // 
@@ -115,6 +115,7 @@
             this.btnClear.TabIndex = 49;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -125,6 +126,7 @@
             this.btnDelete.TabIndex = 48;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -135,6 +137,7 @@
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -145,6 +148,7 @@
             this.btnAdd.TabIndex = 46;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // supplierDataGridView
             // 
@@ -164,6 +168,7 @@
             this.supplierDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.supplierDataGridView.Size = new System.Drawing.Size(900, 382);
             this.supplierDataGridView.TabIndex = 50;
+            this.supplierDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.supplierDataGridView_CellMouseClick);
             // 
             // txtId
             // 
@@ -195,16 +200,17 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPhoneNo);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSuppliers";
             this.Text = "Suppliers";
+            this.Load += new System.EventHandler(this.frmSuppliers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.supplierDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,10 +222,10 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPhoneNo;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;

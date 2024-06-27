@@ -21,7 +21,6 @@ namespace EasyInventory
 
         private void categoryDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             txtId.Text = categoryDataGridView.CurrentRow.Cells[0].Value.ToString();
             txtCategory.Text = categoryDataGridView.CurrentRow.Cells[1].Value.ToString();
             descRichTextBox.Text = categoryDataGridView.CurrentRow.Cells[2].Value.ToString();

@@ -13,6 +13,7 @@ namespace EasyInventory
     public partial class frmProducts : Form
     {
         ProductDataClasses1DataContext dc = new ProductDataClasses1DataContext();
+        CategoryDataClasses1DataContext c = new CategoryDataClasses1DataContext();
 
 
         public frmProducts()
@@ -23,6 +24,7 @@ namespace EasyInventory
         private void frmProducts_Load(object sender, EventArgs e)
         {
             refreshDataGrid();
+            loadCategory();
         }
 
         private void tblDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -33,6 +35,12 @@ namespace EasyInventory
             txtPrice.Text = tblDataGridView.CurrentRow.Cells[3].Value.ToString();
             txtQty.Text = tblDataGridView.CurrentRow.Cells[4].Value.ToString();
 
+        }
+
+        private void loadCategory()
+        {
+            var selectCategories = from a in c.tblCategories select a.categoryName;
+            cmbCategory.DataSource = selectCategories;
         }
 
         private void refreshDataGrid()

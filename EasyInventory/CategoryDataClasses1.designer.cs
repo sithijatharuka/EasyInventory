@@ -36,7 +36,7 @@ namespace EasyInventory
     #endregion
 		
 		public CategoryDataClasses1DataContext() : 
-				base(global::EasyInventory.Properties.Settings.Default.InventoryDBConnectionString1, mappingSource)
+				base(global::EasyInventory.Properties.Settings.Default.InventoryDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

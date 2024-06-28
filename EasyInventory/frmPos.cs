@@ -109,11 +109,29 @@ namespace EasyInventory
             cartDataGridView.Rows.Clear();
             txtTotal.Text = "";
             btnPay.Enabled = false;
+            clearCart();
         }
 
         private void clearData()
         {
             txtQty.Clear();
+        }
+
+        private void clearCart()
+        {
+            try
+            {
+                var cartItems = from item in c.tblCarts select item;
+
+                // Delete all selected items
+                c.tblCarts.DeleteAllOnSubmit(cartItems);
+                c.SubmitChanges();
+                clearData();
+            }
+            catch
+            {
+                MessageBox.Show("The cart table did not clear", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

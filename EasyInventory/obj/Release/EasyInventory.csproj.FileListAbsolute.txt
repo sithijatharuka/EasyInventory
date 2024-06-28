@@ -1,0 +1,17 @@
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Release\InventoryDB.mdf
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Release\InventoryDB_log.ldf
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Release\EasyInventory.exe.config
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Release\EasyInventory.exe
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Release\EasyInventory.pdb
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.csproj.AssemblyReference.cache
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmCategory.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmPos.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmHome.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmProducts.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmWelcome.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.Properties.Resources.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.frmSuppliers.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.csproj.GenerateResource.cache
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.csproj.CoreCompileInputs.cache
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.exe
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Release\EasyInventory.pdb

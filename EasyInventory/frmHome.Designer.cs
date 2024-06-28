@@ -39,12 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnProduct = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.HomePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHome
@@ -177,33 +173,10 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            this.HomePanel.Controls.Add(this.label2);
-            this.HomePanel.Controls.Add(this.pictureBox2);
-            this.HomePanel.Location = new System.Drawing.Point(303, 2);
+            this.HomePanel.Location = new System.Drawing.Point(299, 2);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(933, 744);
+            this.HomePanel.Size = new System.Drawing.Size(941, 743);
             this.HomePanel.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(150, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(625, 591);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(72, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(781, 45);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Welcome to Your Inventory Management System";
             // 
             // frmHome
             // 
@@ -214,15 +187,15 @@
             this.Controls.Add(this.btnPos);
             this.Controls.Add(this.btnSuppliers);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EasyInventory";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.HomePanel.ResumeLayout(false);
-            this.HomePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,7 +212,5 @@
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -39,9 +39,11 @@
             this.btnPay = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblDataGridView
@@ -178,10 +180,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            this.panel2.Location = new System.Drawing.Point(-1, -3);
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1245, 76);
+            this.panel2.Size = new System.Drawing.Size(1240, 76);
             this.panel2.TabIndex = 35;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(179)))));
+            this.lblDate.Location = new System.Drawing.Point(838, 16);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(93, 45);
+            this.lblDate.TabIndex = 36;
+            this.lblDate.Text = "Date";
             // 
             // frmPos
             // 
@@ -197,6 +213,8 @@
             this.Controls.Add(this.tblDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "frmPos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EasyInventory POS System";
@@ -205,6 +223,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cartDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,6 +243,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblDate;
     }
 }
 

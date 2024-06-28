@@ -14,3 +14,4 @@ C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.f
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Debug\InventoryDB.mdf
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\bin\Debug\InventoryDB_log.ldf
 C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmPos.resources
+C:\Users\HelaCoder\Desktop\EasyInventory\EasyInventory\obj\Debug\EasyInventory.frmWelcome.resources

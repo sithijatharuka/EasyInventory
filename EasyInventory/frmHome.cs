@@ -19,7 +19,17 @@ namespace EasyInventory
 
         private void LoadfrmHome()
         {
-     
+            frmWelcome frmWelcome = new frmWelcome();
+            frmWelcome.TopLevel = false; // Set TopLevel to false
+            frmWelcome.FormBorderStyle = FormBorderStyle.None; // Remove the border
+            frmWelcome.Dock = DockStyle.Fill; // Fill the panel with the form
+
+            HomePanel.Controls.Add(frmWelcome); // Add form2 to panel1
+                                                //HomePanel.Tag = frmProduct; // Set panel tag to form2
+
+            frmWelcome.BringToFront();
+
+            frmWelcome.Show(); // Show form2
         }
 
         private void LoadfrmProduct()
@@ -97,6 +107,11 @@ namespace EasyInventory
             {
                 Application.Exit();
             }
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            LoadfrmHome();
         }
     }
 }

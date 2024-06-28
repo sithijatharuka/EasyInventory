@@ -23,6 +23,8 @@ namespace EasyInventory
 
         private void frmPos_Load(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            lblDate.Text = now.ToString("D");
             refreshDataGrid();
             btnPay.Enabled = false;
         }   

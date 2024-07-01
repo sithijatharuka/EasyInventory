@@ -140,6 +140,7 @@ namespace EasyInventory
         {
             txtCategory.Clear();
             descRichTextBox.Clear();
+            txtId.Clear();
         }
 
         // calling crud operations

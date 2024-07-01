@@ -195,7 +195,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\cart.png" />
     <Content Include="images\shop.png" />
     <Content Include="images\user1.png" />
     <Content Include="InventoryDB.mdf">

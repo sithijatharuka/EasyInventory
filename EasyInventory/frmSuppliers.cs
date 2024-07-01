@@ -140,6 +140,7 @@ namespace EasyInventory
         {
             txtName.Clear();
             txtPhoneNo.Clear();
+            txtId.Clear();
         }
 
         // calling crud operations

@@ -122,9 +122,10 @@ namespace EasyInventory
             txtProductName.Clear();
             txtPrice.Clear();
             txtQty.Clear();
+            txtId.Clear();
         }
 
- 
+
 
         // calling crud operations
 

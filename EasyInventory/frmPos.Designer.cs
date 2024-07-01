@@ -193,7 +193,7 @@
             this.lblDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(179)))));
-            this.lblDate.Location = new System.Drawing.Point(838, 16);
+            this.lblDate.Location = new System.Drawing.Point(772, 16);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(93, 45);
             this.lblDate.TabIndex = 36;
